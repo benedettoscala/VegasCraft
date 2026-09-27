@@ -1,0 +1,28 @@
+{
+  "required": true,
+  "package": "dev.vegascraft.mixin",
+  "compatibilityLevel": "JAVA_25",
+  "mixins": [
+    "AbstractArrowMixin",
+    "BlockCollisionsMixin",
+    "BlockStateBaseMixin",
+    "CactusBlockMixin",
+    "EntityFluidInteractionMixin",
+    "EntityPickMixin",
+    "EntitySwimMixin",
+    "FallingBlockMixin",
+    "FlowingFluidMixin",
+    "ItemMixin",
+    "MinecraftServerFlightMixin",
+    "PathfindingContextMixin",
+    "PlayerEdgeMixin",
+    "PressurePlateMixin",
+    "ProjectileMixin",
+    "ProjectileUtilMixin",
+    "ServerExplosionMixin",
+    "ServerPlayerMixin",
+    "SlotMixin",
+    "SmithingMixin"
+  ],
+  "injectors": { "defaultRequire": 1 }
+}

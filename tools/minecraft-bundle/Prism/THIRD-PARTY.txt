@@ -1,0 +1,25 @@
+VegasCraft ships this copy of Minecraft's launcher setup so New Vegas can start Minecraft by itself.
+VegasCraft doesn't include Minecraft: Prism Launcher downloads it after you sign in with a
+Microsoft account that owns Minecraft: Java Edition.
+
+Prism Launcher {PRISM_VERSION} (this folder, the unmodified portable Windows build)
+  License: GNU General Public License v3.0 (LICENSE-PrismLauncher.txt)
+  Source:  https://github.com/PrismLauncher/PrismLauncher/tree/{PRISM_VERSION}
+
+Fabric API 0.161.0+26.3 (instances/VegasCraft/.minecraft/mods/fabric-api-*.jar)
+  License: Apache License 2.0
+  Source:  https://github.com/FabricMC/fabric
+
+e4mc 6.2.2 (instances/VegasCraft/.minecraft/mods/e4mc-*.jar): internet sharing for a LAN world
+  License: MIT
+  Source:  https://github.com/vgskye/e4mc-minecraft-architectury
+
+VegasCraft 0.2.1 (instances/VegasCraft/.minecraft/mods/vegascraft-*.jar)
+  License: MIT
+  Includes code adapted from SkyCraft (MIT), https://github.com/chasmlol/SkyCraft
+  SkyCraft's notice is included in the jar under META-INF/licenses/SkyCraft-MIT.txt.
+
+The bundle uses Minecraft 26.3, Fabric Loader 0.19.5 and Java 25, downloaded by Prism.
+New Vegas multiplayer integration is experimental and has not been validated.
+Native Pip-Boy icons and map images are generated locally from the installed New Vegas
+game files; extracted game assets and account data are not included in this bundle.

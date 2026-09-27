@@ -1,0 +1,10 @@
+/.tools/
+/upstream/
+/build/
+/dist/
+/diagnostics/
+/fabric/.gradle/
+/fabric/build/
+/fabric/run/
+__pycache__/
+*.log

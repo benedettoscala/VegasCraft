@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "vegascraft",
+  "version": "${version}",
+  "name": "VegasCraft",
+  "description": "Play Fallout: New Vegas with Minecraft physics, inventory, blocks and combat. Port of SkyCraft.",
+  "authors": ["chasmlol (SkyCraft)", "VegasCraft contributors"],
+  "contact": {
+    "sources": "https://github.com/chasmlol/SkyCraft"
+  },
+  "license": "MIT",
+  "environment": "client",
+  "entrypoints": {
+    "main": ["dev.vegascraft.SkyCraft"],
+    "client": ["dev.vegascraft.client.SkyCraftClient"]
+  },
+  "mixins": [
+    "vegascraft.mixins.json",
+    { "config": "vegascraft.client.mixins.json", "environment": "client" }
+  ],
+  "depends": {
+    "fabricloader": ">=0.19.5",
+    "minecraft": "~26.3",
+    "java": ">=25",
+    "fabric-api": "*"
+  }
+}

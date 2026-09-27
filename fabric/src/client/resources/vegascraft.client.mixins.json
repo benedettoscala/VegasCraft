@@ -1,0 +1,41 @@
+{
+  "required": true,
+  "package": "dev.vegascraft.client.mixin",
+  "compatibilityLevel": "JAVA_25",
+  "client": [
+    "AbstractContainerScreenAccessor",
+    "CameraZoomMixin",
+    "ChatComponentMixin",
+    "ClientLevelAccessor",
+    "ClientLevelDigMixin",
+    "CraftingScreenMixin",
+    "EntityCollideMixin",
+    "FirstPersonHandsMixin",
+    "FirstPersonItemMixin",
+    "FramerateLimitTrackerMixin",
+    "GuiMixin",
+    "HumanoidModelMixin",
+    "InputConstantsMixin",
+    "IntegratedServerMixin",
+    "ItemInHandLayerMixin",
+    "LevelExtractorMixin",
+    "LevelRendererMixin",
+    "MinecraftDigMixin",
+    "MinecraftMixin",
+    "PackRepositoryMixin",
+    "RenderSetupAccessor",
+    "RenderTypeAccessor",
+    "ScreenBackgroundMixin",
+    "ScreenMixin",
+    "SpriteContentsAccessor",
+    "TextureAtlasAccessor",
+    "TextureBindingAccessor",
+    "TextureManagerAccessor",
+    "WaitingForPlayerChunkMixin",
+    "WindowMixin",
+    "WorldOpenFlowsMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

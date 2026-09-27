@@ -1,0 +1,44 @@
+plugins {
+    id 'net.fabricmc.fabric-loom' version "${loom_version}"
+}
+loom {
+    splitEnvironmentSourceSets()
+    runs {
+        client {
+            programArgs '--username', (System.getenv('VEGASCRAFT_USERNAME') ?: 'Courier')
+            vmArgs '--enable-native-access=ALL-UNNAMED', '-Dvegascraft.quitWithSkyrim=false'
+        }
+    }
+    mods {
+        'vegascraft' {
+            sourceSet sourceSets.main
+            sourceSet sourceSets.client
+        }
+    }
+}
+dependencies {
+    minecraft "com.mojang:minecraft:${project.minecraft_version}"
+    implementation "net.fabricmc:fabric-loader:${project.loader_version}"
+    implementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
+    testImplementation platform('org.junit:junit-bom:5.11.4')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+test {
+    useJUnitPlatform()
+    testLogging { events 'passed', 'failed'; exceptionFormat 'full' }
+}
+tasks.withType(JavaCompile).configureEach { options.release = 25 }
+java {
+    sourceCompatibility = JavaVersion.VERSION_25
+    targetCompatibility = JavaVersion.VERSION_25
+    withSourcesJar()
+}
+processResources {
+    def modVersion = project.version
+    inputs.property 'version', modVersion
+    filesMatching('fabric.mod.json') { expand version: modVersion }
+}
+jar {
+    from('../licenses/SkyCraft-MIT.txt') { into 'META-INF/licenses' }
+}

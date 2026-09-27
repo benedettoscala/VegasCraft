@@ -1,0 +1,4 @@
+LIBRARY VegasCraft
+EXPORTS
+    NVSEPlugin_Query
+    NVSEPlugin_Load
